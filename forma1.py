@@ -49,14 +49,15 @@ print(f"A legtöbb futamot teljesített versenyző: {legtobb_futamgyozelmu_verse
 
 futamok_szama = 0
 for versenyzo in tartalom:
-    futamok_szama += versenyzok[3]
+    futamok_szama += versenyzo[3]
 
+print(futamok_szama)
 atlagos_futamszam = futamok_szama / len(tartalom)
 # print(futamok_szama)
 # print(atlagos_futamszam)
 print(f"Az átlagos futamszám: {atlagos_futamszam}")
 
-with open('kiirt_adatok.txt', 'w', encoding='utf-8') as celfajl:
+with open('kiirt_adatok/statisztika.txt', 'w', encoding='utf-8') as celfajl:
     print(f"A beolvasott fájlban összesen {len(tartalom)} versenyző szerepel.", file=celfajl)
     print(f"A legtöbb futamot nyert versenyző: {legtobb_futamgyozelmu_versenyzo[0]}", file=celfajl)
     print(f"A legtöbb futamot teljesített versenyző: {legtobb_futamgyozelmu_versenyzo[0]}", file=celfajl)
